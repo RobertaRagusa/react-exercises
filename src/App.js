@@ -1,4 +1,3 @@
-<<<<<<< basic-concepts
 import React from "react";
 import { Counter } from "./Counter";
 import { Hello } from "./Hello";
@@ -15,5 +14,3 @@ export class App extends React.Component {
     );
   }
 }
-=======
->>>>>>> develop
