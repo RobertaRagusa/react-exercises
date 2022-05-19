@@ -22,6 +22,14 @@ export class Login extends React.Component {
     return console.log(state);
   };
 
+  resetInputs = () => {
+    this.setState({
+      username: "",
+      password: "",
+      remember: false,
+    });
+  };
+
   render() {
     return (
       <div>
@@ -50,6 +58,9 @@ export class Login extends React.Component {
           onClick={() => this.onLogin(this.state)}
         >
           Login
+        </button>
+        <button name="reset" onClick={this.resetInputs}>
+          Reset
         </button>
       </div>
     );
