@@ -2,8 +2,6 @@ import React from "react";
 
 export class UncontrolledLogin extends React.Component {
   handleFormSubmit = (event) => {
-    event.preventDefault();
-
     const username = event.target.elements.username.value;
     const password = event.target.elements.password.value;
     const remember = event.target.elements.remember.checked;
@@ -16,7 +14,7 @@ export class UncontrolledLogin extends React.Component {
       <div>
         <h3>My UncontrolledLogin Form</h3>
         <form onSubmit={this.handleFormSubmit}>
-          <input name="username" />
+          <input name="username" autoFocus="true" />
           <input name="password" type="password" />
           <input name="remember" type="checkbox" />
 
