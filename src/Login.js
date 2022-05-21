@@ -29,7 +29,6 @@ export class Login extends React.Component {
       remember: false,
     });
   };
-
   render() {
     return (
       <div>
@@ -56,6 +55,9 @@ export class Login extends React.Component {
           name="login"
           disabled={!this.state.username || !this.state.password}
           onClick={() => this.onLogin(this.state)}
+          style={{
+            backgroundColor: this.state.password.length < 8 ? "red" : "green",
+          }}
         >
           Login
         </button>
