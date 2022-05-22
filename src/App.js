@@ -13,7 +13,7 @@ import { Container } from "./Container";
 export class App extends React.Component {
   render() {
     return (
-      <Container>
+      <Container title="My Awesome Application">
         <Hello />
         <Welcome renderAge={true} />
         <Counter initialValue={5} incrementInterval={500} incrementAmount={5} />
