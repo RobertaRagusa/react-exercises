@@ -8,11 +8,12 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Login } from "./Login";
 import { UncontrolledLogin } from "./UncontrolledLogin";
 import { TodoList } from "./TodoList";
+import { Container } from "./Container";
 
 export class App extends React.Component {
   render() {
     return (
-      <div>
+      <Container>
         <Hello />
         <Welcome renderAge={true} />
         <Counter initialValue={5} incrementInterval={500} incrementAmount={5} />
@@ -23,7 +24,7 @@ export class App extends React.Component {
         <UncontrolledLogin />
         <br />
         <TodoList />
-      </div>
+      </Container>
     );
   }
 }
