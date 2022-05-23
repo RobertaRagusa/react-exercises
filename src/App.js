@@ -27,7 +27,11 @@ export class App extends React.Component {
           render={(items) => {
             const [...item] = items;
 
-            return <div>{item}</div>;
+            return (
+              <ul>
+                <li>{item}</li>
+              </ul>
+            );
           }}
         />
       </Container>
