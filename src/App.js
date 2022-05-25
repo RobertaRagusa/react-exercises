@@ -12,6 +12,7 @@ import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { DisplayLanguage } from "./DisplayLanguage";
 import { Sum } from "./Sum";
+import { GithubUser } from "./GithubUser";
 
 export class App extends React.Component {
   state = {
@@ -29,7 +30,11 @@ export class App extends React.Component {
       <Container title="My Awesome Application">
         <Hello />
         <Welcome renderAge={true} />
-        <Counter initialValue={5} incrementInterval={500} incrementAmount={5} />
+        <Counter
+          initialValue={5}
+          incrementInterval={10000}
+          incrementAmount={5}
+        />
         <ClickCounter
           onCounterChange={(counter) => {
             console.log(`The count is: ${counter}`);
@@ -62,6 +67,7 @@ export class App extends React.Component {
           <DisplayLanguage />
         </LanguageContext.Provider>
         <Sum />
+        <GithubUser username="RobertaRagusa" />
       </Container>
     );
   }
