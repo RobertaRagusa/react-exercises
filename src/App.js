@@ -9,11 +9,12 @@ import React from "react";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
+import { HookCounter } from "./HookCounter";
 // import { LanguageContext } from "./LanguageContext";
 // import { DisplayLanguage } from "./DisplayLanguage";
 // import { Sum } from "./Sum";
-import { GithubUser } from "./GithubUser";
-import { GithubUserList } from "./GithubUserList";
+// import { GithubUser } from "./GithubUser";
+// import { GithubUserList } from "./GithubUserList";
 
 export class App extends React.Component {
   state = {
@@ -67,9 +68,10 @@ export class App extends React.Component {
            </select>
            <DisplayLanguage />
          </LanguageContext.Provider>
-         <Sum /> */}
+         <Sum /> 
         <GithubUser username="RobertaRagusa" />
-        <GithubUserList />
+          <GithubUserList /> */}
+        <HookCounter />
       </Container>
     );
   }
