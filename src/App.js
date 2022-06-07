@@ -1,4 +1,5 @@
 import React from "react";
+import { CarDetails } from "./CarDetails";
 // import { ClickCounter } from "./ClickCounter";
 // import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
@@ -14,8 +15,8 @@ import { Container } from "./Container";
 // import { LanguageContext } from "./LanguageContext";
 // import { DisplayLanguage } from "./DisplayLanguage";
 // import { Sum } from "./Sum";
-import { GithubUser } from "./GithubUser";
-import { GithubUserList } from "./GithubUserList";
+// import { GithubUser } from "./GithubUser";
+// import { GithubUserList } from "./GithubUserList";
 
 export class App extends React.Component {
   state = {
@@ -69,11 +70,14 @@ export class App extends React.Component {
            </select>
            <DisplayLanguage />
          </LanguageContext.Provider>
-         <Sum /> */}
+         <Sum /> 
         <GithubUser username="RobertaRagusa" />
         <GithubUserList />
-        {/*<HookCounter />
+        <HookCounter />
         <HookForm />*/}
+        <CarDetails
+          initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
+        />
       </Container>
     );
   }
