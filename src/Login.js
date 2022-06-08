@@ -1,6 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 
-export class Login extends React.Component {
+export function Login() {
+  const [data, setData] = useState({
+    username: "",
+    password: "",
+    remember: false,
+  });
+
+  function handleInputChange(event) {
+    const { name, type, value, checked } = event.target;
+
+    setData((data) => {
+      return {
+        ...data,
+        [name]: type === "checkbox" ? checked : value,
+      };
+    });
+  }
+
+  console.log(data);
+
+  return (
+    <form>
+      <input
+        name="username"
+        placeholder="username"
+        value={data.username}
+        onChange={handleInputChange}
+      ></input>
+      <input
+        name="password"
+        placeholder="password"
+        type="password"
+        value={data.password}
+        onChange={handleInputChange}
+      ></input>
+      <input
+        name="remember"
+        type="checkbox"
+        checked={data.remember}
+        onChange={handleInputChange}
+      ></input>
+    </form>
+  );
+}
+
+/*export class Login extends React.Component {
   state = {
     username: "",
     password: "",
@@ -67,4 +112,4 @@ export class Login extends React.Component {
       </div>
     );
   }
-}
+}*/
