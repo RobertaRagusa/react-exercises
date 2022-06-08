@@ -10,6 +10,7 @@ import React from "react";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
+import { FilteredList } from "./FilteredList";
 import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
 // import { LanguageContext } from "./LanguageContext";
@@ -72,13 +73,14 @@ export class App extends React.Component {
         </LanguageContext.Provider>
         <Sum /> 
           <GithubUser username="RobertaRagusa" />
-          <GithubUserList />*/}
+          <GithubUserList />
         <HookCounter />
-        {/*<HookForm />
+        <HookForm />
         <CarDetails
           initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
         />
         */}
+        <FilteredList />
       </Container>
     );
   }
