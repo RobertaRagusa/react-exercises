@@ -1,5 +1,5 @@
 import React from "react";
-import { CarDetails } from "./CarDetails";
+// import { CarDetails } from "./CarDetails";
 // import { ClickCounter } from "./ClickCounter";
 // import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
@@ -12,8 +12,8 @@ import { CarDetails } from "./CarDetails";
 import { Container } from "./Container";
 // import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
-// import { LanguageContext } from "./LanguageContext";
-// import { DisplayLanguage } from "./DisplayLanguage";
+import { LanguageContext } from "./LanguageContext";
+import { DisplayLanguage } from "./DisplayLanguage";
 // import { Sum } from "./Sum";
 // import { GithubUser } from "./GithubUser";
 // import { GithubUserList } from "./GithubUserList";
@@ -59,25 +59,25 @@ export class App extends React.Component {
                </ul>
              );
            }}
-         />
-         <LanguageContext.Provider value={this.state.language}>
-           <select
-             value={this.state.language}
-             onChange={this.handleLanguageChange}
-           >
-             <option value="en">ENGLISH</option>
-             <option value="it">ITALIAN</option>
-           </select>
-           <DisplayLanguage />
-         </LanguageContext.Provider>
-         <Sum /> 
-        <GithubUser username="RobertaRagusa" />
-        <GithubUserList />
-        <HookCounter />
-        <HookForm />*/}
-        <CarDetails
-          initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
-        />
+          />*/}
+        <LanguageContext.Provider value={this.state.language}>
+          <select
+            value={this.state.language}
+            onChange={this.handleLanguageChange}
+          >
+            <option value="en">ENGLISH</option>
+            <option value="it">ITALIAN</option>
+          </select>
+          <DisplayLanguage />
+        </LanguageContext.Provider>
+        {/*<Sum /> 
+          <GithubUser username="RobertaRagusa" />
+          <GithubUserList />
+          <HookCounter />
+          <HookForm />
+          <CarDetails
+            initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
+          />*/}
       </Container>
     );
   }
