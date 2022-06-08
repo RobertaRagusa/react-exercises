@@ -11,16 +11,3 @@ export function DisplayLanguage() {
 
   return <h1>{Strings[language].CURRENT_LANGUAGE}</h1>;
 }
-/*export class DisplayLanguage extends React.Component {
-  render() {
-    return (
-      <div>
-        <LanguageContext.Consumer>
-          {(language) => {
-            return <h1>{Strings[language].CURRENT_LANGUAGE}</h1>;
-          }}
-        </LanguageContext.Consumer>
-      </div>
-    );
-  }
-}*/
