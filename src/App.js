@@ -10,10 +10,10 @@ import React from "react";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
-// import { HookCounter } from "./HookCounter";
+import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
-import { LanguageContext } from "./LanguageContext";
-import { DisplayLanguage } from "./DisplayLanguage";
+// import { LanguageContext } from "./LanguageContext";
+// import { DisplayLanguage } from "./DisplayLanguage";
 // import { Sum } from "./Sum";
 // import { GithubUser } from "./GithubUser";
 // import { GithubUserList } from "./GithubUserList";
@@ -59,7 +59,7 @@ export class App extends React.Component {
                </ul>
              );
            }}
-          />*/}
+          />
         <LanguageContext.Provider value={this.state.language}>
           <select
             value={this.state.language}
@@ -70,14 +70,15 @@ export class App extends React.Component {
           </select>
           <DisplayLanguage />
         </LanguageContext.Provider>
-        {/*<Sum /> 
+        <Sum /> 
           <GithubUser username="RobertaRagusa" />
-          <GithubUserList />
-          <HookCounter />
-          <HookForm />
-          <CarDetails
-            initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
-          />*/}
+          <GithubUserList />*/}
+        <HookCounter />
+        {/*<HookForm />
+        <CarDetails
+          initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
+        />
+        */}
       </Container>
     );
   }
