@@ -43,6 +43,7 @@ export class App extends React.Component {
           <Route path="/" element={<Welcome name="Roberta" />} />
           <Route path="counter" element={<Counter />} />
           <Route path="users" element={<GithubUserList />}>
+            <Route index element={<h3>Add a user and select it</h3>} />
             <Route path=":username" element={<ShowGithubUser />} />
           </Route>
           <Route
@@ -54,7 +55,6 @@ export class App extends React.Component {
               </div>
             }
           />
-          <Route path="users" element={<GithubUserList />} />
         </Routes>
         {/*<Hello />
         <Welcome renderAge={true} />
