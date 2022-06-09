@@ -42,6 +42,15 @@ export class App extends React.Component {
           <Route path="/" element={<Welcome name="Roberta" />} />
           <Route path="counter" element={<Counter />} />
           <Route path="users/:username" element={<ShowGithubUser />} />
+          <Route
+            path="*"
+            element={
+              <div>
+                <p>Not found</p>
+                <Link to="/">Go Home</Link>
+              </div>
+            }
+          />
         </Routes>
         {/*<Hello />
         <Welcome renderAge={true} />
