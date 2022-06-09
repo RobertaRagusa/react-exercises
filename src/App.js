@@ -11,6 +11,7 @@ import { Welcome } from "./Welcome";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
+import { ShowGithubUser } from "./ShowGithubUser";
 // import { FilteredList } from "./FilteredList";
 // import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
@@ -37,6 +38,7 @@ export class App extends React.Component {
         <Routes>
           <Route path="/" element={<Welcome name="Roberta" />} />
           <Route path="counter" element={<Counter />} />
+          <Route path="users/:username" element={<ShowGithubUser />} />
         </Routes>
         {/*<Hello />
         <Welcome renderAge={true} />
@@ -58,7 +60,7 @@ export class App extends React.Component {
          <TodoList
            render={(items) => {
              const [...item] = items;
-
+            <GithubUser username="RobertaRagusa" />
              return (
                <ul>
                  <li>{item}</li>
@@ -77,7 +79,7 @@ export class App extends React.Component {
           <DisplayLanguage />
         </LanguageContext.Provider>
         <Sum /> 
-          <GithubUser username="RobertaRagusa" />
+          
           <GithubUserList />
         <HookCounter />
         <HookForm />
