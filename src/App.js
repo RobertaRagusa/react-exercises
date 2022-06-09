@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 // import { CarDetails } from "./CarDetails";
 // import { ClickCounter } from "./ClickCounter";
 import { Counter } from "./Counter";
@@ -35,6 +35,9 @@ export class App extends React.Component {
   render() {
     return (
       <Container title="My Awesome Application">
+        <Link to="/">Homepage</Link>
+        <Link to="counter">Counter</Link>
+        <Link to="users/:username">GithubUser</Link>
         <Routes>
           <Route path="/" element={<Welcome name="Roberta" />} />
           <Route path="counter" element={<Counter />} />
