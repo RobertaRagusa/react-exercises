@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 // import { CarDetails } from "./CarDetails";
 // import { ClickCounter } from "./ClickCounter";
-// import { Counter } from "./Counter";
+import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
 import { Welcome } from "./Welcome";
 // import { ClickTracker } from "./ClickTracker";
@@ -36,6 +36,7 @@ export class App extends React.Component {
       <Container title="My Awesome Application">
         <Routes>
           <Route path="/" element={<Welcome name="Roberta" />} />
+          <Route path="counter" element={<Counter />} />
         </Routes>
         {/*<Hello />
         <Welcome renderAge={true} />
