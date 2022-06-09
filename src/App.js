@@ -1,17 +1,18 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 // import { CarDetails } from "./CarDetails";
 // import { ClickCounter } from "./ClickCounter";
 // import { Counter } from "./Counter";
 // import { Hello } from "./Hello";
-// import { Welcome } from "./Welcome";
+import { Welcome } from "./Welcome";
 // import { ClickTracker } from "./ClickTracker";
 // import { InteractiveWelcome } from "./InteractiveWelcome";
 // import { Login } from "./Login";
 // import { UncontrolledLogin } from "./UncontrolledLogin";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
-import { FilteredList } from "./FilteredList";
-import { HookCounter } from "./HookCounter";
+// import { FilteredList } from "./FilteredList";
+// import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
 // import { LanguageContext } from "./LanguageContext";
 // import { DisplayLanguage } from "./DisplayLanguage";
@@ -33,9 +34,12 @@ export class App extends React.Component {
   render() {
     return (
       <Container title="My Awesome Application">
-        {/* <Hello />
-         <Welcome renderAge={true} />
-         <Counter
+        <Routes>
+          <Route path="/" element={<Welcome name="Roberta" />} />
+        </Routes>
+        {/*<Hello />
+        <Welcome renderAge={true} />
+        <Counter
            initialValue={5}
            incrementInterval={10000}
            incrementAmount={5}
@@ -79,8 +83,7 @@ export class App extends React.Component {
         <CarDetails
           initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
         />
-        */}
-        <FilteredList />
+        <FilteredList />*/}
       </Container>
     );
   }
