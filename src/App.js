@@ -12,6 +12,7 @@ import { Welcome } from "./Welcome";
 // import { TodoList } from "./TodoList";
 import { Container } from "./Container";
 import { ShowGithubUser } from "./ShowGithubUser";
+import { GithubUserList } from "./GithubUserList";
 // import { FilteredList } from "./FilteredList";
 // import { HookCounter } from "./HookCounter";
 // import { HookForm } from "./HookForm";
@@ -41,7 +42,9 @@ export class App extends React.Component {
         <Routes>
           <Route path="/" element={<Welcome name="Roberta" />} />
           <Route path="counter" element={<Counter />} />
-          <Route path="users/:username" element={<ShowGithubUser />} />
+          <Route path="users" element={<GithubUserList />}>
+            <Route path=":username" element={<ShowGithubUser />} />
+          </Route>
           <Route
             path="*"
             element={
@@ -51,6 +54,7 @@ export class App extends React.Component {
               </div>
             }
           />
+          <Route path="users" element={<GithubUserList />} />
         </Routes>
         {/*<Hello />
         <Welcome renderAge={true} />
