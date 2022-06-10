@@ -1,11 +1,12 @@
 import { useGithubUser } from "./useGithubUser";
 
 export function GithubUser() {
-  const { users, error, isLoading } = useGithubUser();
+  const { users, error, isLoading, onRefresh } = useGithubUser();
 
   return (
     <div>
-      {users && !error && (
+      <button onClick={onRefresh}>Refresh</button>
+      {users && (
         <ul>
           {users.map((user) => {
             return <li key={user.login}>{user.login}</li>;
