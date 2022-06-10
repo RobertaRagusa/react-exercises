@@ -19,7 +19,8 @@ import { Container } from "./Container";
 // import { LanguageContext } from "./LanguageContext";
 // import { DisplayLanguage } from "./DisplayLanguage";
 // import { Sum } from "./Sum";
-import { GithubUser } from "./GithubUser";
+// import { GithubUser } from "./GithubUser";
+import { CounterReducer } from "./state/CounterReducer";
 // import { GithubUserList } from "./GithubUserList";
 
 export class App extends React.Component {
@@ -55,9 +56,9 @@ export class App extends React.Component {
               </div>
             }
           />
-          </Routes>*/}
+          </Routes>
         <GithubUser />
-        {/*<Hello />
+        <Hello />
         <Welcome renderAge={true} />
         <Counter
            initialValue={5}
@@ -104,6 +105,7 @@ export class App extends React.Component {
           initialData={{ model: "Fiat 500", year: 2022, color: "Black" }}
         />
         <FilteredList />*/}
+        <CounterReducer />
       </Container>
     );
   }
