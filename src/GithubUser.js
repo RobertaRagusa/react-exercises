@@ -1,13 +1,20 @@
 import { useGithubUser } from "./useGithubUser";
 
-export function GithubUser({ username }) {
-  const { data, error, loading } = useGithubUser(username);
+export function GithubUser() {
+  const { users, error, isLoading, onRefresh } = useGithubUser();
 
   return (
     <div>
-      {data && <h1>{data.username}</h1>}
-      {error && <h1>There has been an error</h1>}
-      {loading && <h1>Loading...</h1>}
+      <button onClick={onRefresh}>Refresh</button>
+      {users && (
+        <ul>
+          {users.map((user) => {
+            return <li key={user.login}>{user.login}</li>;
+          })}
+        </ul>
+      )}
+      {error && <h1>An error has occured</h1>}
+      {isLoading && <h1>Loading...</h1>}
     </div>
   );
 }
